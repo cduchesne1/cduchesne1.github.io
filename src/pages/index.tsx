@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Layout from '../layout/Layout';
 import Hero from '../components/Hero';
 import Work from '../components/Work';
+import Gallery from '../components/Gallery';
 
 export default function Home() {
   return (
@@ -36,6 +37,7 @@ export default function Home() {
         <Layout>
           <Hero />
           <Work />
+          <Gallery />
         </Layout>
       </main>
     </>

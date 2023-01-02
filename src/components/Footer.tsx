@@ -24,12 +24,18 @@ const FooterContainer = styled('div')`
   } ;
 `;
 
+const Copyright = styled(Typography)`
+  @media (max-width: 474px) {
+    font-size: 12px;
+  } ;
+`;
+
 export default function Footer() {
   const currentYear = new Date().getFullYear();
   return (
     <FooterSection>
       <FooterContainer>
-        <Typography variant="caption">{`Copyright © ${currentYear} Christophe Duchesne`}</Typography>
+        <Copyright variant="caption">{`Copyright © ${currentYear} Christophe Duchesne`}</Copyright>
       </FooterContainer>
     </FooterSection>
   );

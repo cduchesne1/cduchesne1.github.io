@@ -156,11 +156,11 @@ export default function Work() {
             </JobContent>
             <List>
               <JobContent variant="body2">
-                ▶ Developed mobile applications for both IOS and Android.
+                ▶ Developed mobile applications for both IOS & Android.
               </JobContent>
               <JobContent variant="body2">
                 ▶ Worked with modern technologies such as Flutter, NestJS,
-                Firebase, Neo4j and GCP.
+                Firebase, Neo4j & GCP.
               </JobContent>
               <JobContent variant="body2">
                 ▶ Wrote different kinds of automated tests (unit, integration,
