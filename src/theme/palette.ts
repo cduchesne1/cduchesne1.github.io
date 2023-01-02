@@ -5,6 +5,7 @@ const palette = {
   },
   secondary: {
     main: '#777e91',
+    light: '#f4f5f6',
     contrastText: '#fcfcfd',
   },
   error: {

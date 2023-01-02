@@ -1,3 +1,5 @@
+import { TypographyOptions } from '@mui/material/styles/createTypography';
+
 const typography = {
   fontFamily: ['Outfit', 'sans-serif'].join(','),
   h1: {
@@ -48,12 +50,14 @@ const typography = {
     fontWeight: 700,
     fontSize: '1rem',
     lineHeight: '1rem',
+    textTransform: 'uppercase',
   },
   button: {
     fontWeight: 700,
     fontSize: '1rem',
     lineHeight: '1rem',
+    textTransform: 'none',
   },
-};
+} as TypographyOptions;
 
 export default typography;
