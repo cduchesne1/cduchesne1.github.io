@@ -1,11 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
-import { styled, Typography } from '@mui/material';
 import Layout from '../layout/Layout';
-
-const Body = styled(Typography)`
-  width: 100%;
-`;
+import Hero from '../components/Hero';
 
 export default function Home() {
   return (
@@ -37,7 +33,7 @@ export default function Home() {
       </Head>
       <main>
         <Layout>
-          <Body variant="body1">Body</Body>
+          <Hero />
         </Layout>
       </main>
     </>

@@ -28,7 +28,7 @@ const typography = {
   },
   body1: {
     fontFamily: ['Inter', 'sans-serif'].join(','),
-    fontWeight: 600,
+    fontWeight: 400,
     fontSize: '1.5rem',
     lineHeight: '2rem',
     letterSpacing: '-0.01em',
