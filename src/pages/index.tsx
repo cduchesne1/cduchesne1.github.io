@@ -2,6 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import Layout from '../layout/Layout';
 import Hero from '../components/Hero';
+import Work from '../components/Work';
 
 export default function Home() {
   return (
@@ -34,6 +35,7 @@ export default function Home() {
       <main>
         <Layout>
           <Hero />
+          <Work />
         </Layout>
       </main>
     </>
