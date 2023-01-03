@@ -3,7 +3,7 @@ import {
 } from '@mui/material';
 import Image from 'next/image';
 import React from 'react';
-import avatar from '../../public/avatar.jpg';
+import avatar from '../../../public/avatar.jpg';
 
 const HeroSection = styled('div')`
   padding-top: 96px;
