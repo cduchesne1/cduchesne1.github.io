@@ -1,52 +1,11 @@
 import { styled, Typography } from '@mui/material';
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
-
-const itemData = [
-  {
-    img: '/images/portfolio01.png',
-    title: 'Portfolio',
-    date: 'August, 2022',
-  },
-  {
-    img: '/images/truematch01.png',
-    title: 'TrueMatch',
-    date: 'October, 2020',
-  },
-  {
-    img: '/images/aeglo01.png',
-    title: 'AEGLO Website',
-    date: 'December, 2021',
-  },
-  {
-    img: '/images/repub01.png',
-    title: 'Repub - A Github Clone',
-    date: 'April, 2022',
-  },
-  {
-    img: '/images/ufood01.png',
-    title: 'UFood',
-    date: 'April, 2022',
-  },
-  {
-    img: '/images/credigit01.png',
-    title: 'Credigit',
-    date: 'February, 2020',
-  },
-  {
-    img: '/images/watchpoint01.png',
-    title: 'Watchpoint',
-    date: 'June, 2019',
-  },
-  {
-    img: '/images/quoridor01.png',
-    title: 'Quoridor',
-    date: 'November, 2020',
-  },
-];
+import projects from '../../data/project';
 
 const GallerySection = styled('div')`
-  padding-top: 96px;
+  padding-top: 180px;
 `;
 
 const GalleryTitle = styled(Typography)`
@@ -131,16 +90,20 @@ export default function Gallery() {
       <GalleryContainer>
         <GalleryTitle variant="h1">What I&apos;ve Built</GalleryTitle>
         <GalleryGrid>
-          {itemData.map((item) => (
+          {projects.map((item) => (
             <GalleryCard key={item.title}>
-              <ImageContainer>
-                <GalleryImage
-                  src={item.img}
-                  alt={item.title}
-                  width={379}
-                  height={498}
-                />
-              </ImageContainer>
+              <Link
+                href={`/projects/${item.path}`}
+              >
+                <ImageContainer>
+                  <GalleryImage
+                    src={item.thumbnail?.src}
+                    alt={item.thumbnail?.alt}
+                    width={379}
+                    height={498}
+                  />
+                </ImageContainer>
+              </Link>
               <ImageDesc>
                 <ImageTitle variant="body2">{item.title}</ImageTitle>
                 <ImageDate variant="caption">{item.date}</ImageDate>

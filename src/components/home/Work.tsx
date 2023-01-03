@@ -32,7 +32,7 @@ function TabPanel(props: TabPanelProps) {
 }
 
 const WorkSection = styled('div')`
-  padding-top: 96px;
+  padding-top: 180px;
 `;
 
 const WorkTitle = styled(Typography)`
