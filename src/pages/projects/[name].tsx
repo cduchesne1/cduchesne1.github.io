@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import { useRouter } from 'next/router';
 import React from 'react';
 import Explore from '../../components/project/Explore';
 import Gallery from '../../components/project/Gallery';
@@ -8,19 +7,35 @@ import Tech from '../../components/project/Tech';
 import projects from '../../data/project';
 import Layout from '../../layout/Layout';
 
-export default function Project() {
-  const router = useRouter();
-  const { name } = router.query;
-  const projectData = projects.find((project) => project.path === name);
-  const projectDataIndex = projects.findIndex(
-    (project) => project.path === name,
+export async function getStaticPaths() {
+  const paths = projects.map((project) => ({
+    params: { name: project.path },
+  }));
+  return { paths, fallback: false };
+}
+
+export async function getStaticProps({ params }: { params: any }) {
+  const projectIndex = projects.findIndex(
+    (project) => project.path === params.name,
   );
-  const projectDataNext =
-    projects[projectDataIndex < projects.length - 1 ? projectDataIndex + 1 : 0];
+  return {
+    props: {
+      projectData: projects.find((project) => project.path === params.name),
+      nextProjectData: projects[projectIndex < projects.length - 1 ? projectIndex + 1 : 0],
+    },
+  };
+}
+
+interface ProjectProps {
+  projectData: any;
+  nextProjectData: any;
+}
+
+export default function Project({ projectData, nextProjectData }: ProjectProps) {
   return (
     <>
       <Head>
-        <title>{`${projectData!.metaTitle} | Christophe Duchesne`}</title>
+        <title>{`${projectData.metaTitle} | Christophe Duchesne`}</title>
         <meta
           name="description"
           content="Christophe Duchesne is a software engineering student who's focus is mostly on fullstack web & mobile development with a passion for best
@@ -32,7 +47,7 @@ export default function Project() {
         />
         <meta
           property="og:title"
-          content={`${projectData!.metaTitle} | Christophe Duchesne`}
+          content={`${projectData.metaTitle} | Christophe Duchesne`}
         />
         <meta
           property="og:description"
@@ -48,21 +63,21 @@ export default function Project() {
         <Layout>
           <Hero
             thumbnail={{
-              src: projectData!.thumbnail.src,
-              alt: projectData!.thumbnail.alt,
+              src: projectData.thumbnail.src,
+              alt: projectData.thumbnail.alt,
             }}
-            title={projectData!.title}
-            description={projectData!.description}
-            date={projectData!.date}
-            hasRepo={projectData!.hasRepo}
-            repoLink={projectData!.repoLink}
+            title={projectData.title}
+            description={projectData.description}
+            date={projectData.date}
+            hasRepo={projectData.hasRepo}
+            repoLink={projectData.repoLink}
           />
-          <Gallery data={projectData!.gallery} />
+          <Gallery data={projectData.gallery} />
           <Tech
-            description={projectData!.techDescription}
-            technologies={projectData!.technologies}
+            description={projectData.techDescription}
+            technologies={projectData.technologies}
           />
-          <Explore title={projectDataNext.title} path={projectDataNext.path} />
+          <Explore title={nextProjectData.title} path={nextProjectData.path} />
         </Layout>
       </main>
     </>

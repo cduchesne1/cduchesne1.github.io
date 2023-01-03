@@ -2,7 +2,6 @@ import { styled, Typography } from '@mui/material';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-import projects from '../../data/project';
 
 const GallerySection = styled('div')`
   padding-top: 180px;
@@ -84,7 +83,11 @@ const ImageDate = styled(Typography)(({ theme }) => ({
   color: theme.palette.secondary.main,
 }));
 
-export default function Gallery() {
+interface GalleryProps {
+  projects: any[];
+}
+
+export default function Gallery({ projects }: GalleryProps) {
   return (
     <GallerySection>
       <GalleryContainer>
