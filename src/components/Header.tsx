@@ -7,6 +7,7 @@ import {
   styled,
   useMediaQuery,
 } from '@mui/material';
+import Contact from './Contact';
 
 const HeaderSection = styled('header')(({ theme }) => ({
   right: 0,
@@ -104,6 +105,26 @@ const MessageButton = styled(IconButton)(({ theme }) => ({
   },
 }));
 
+const ModalSection = styled('section')`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(244, 244, 244, 0.8);
+  z-index: 100;
+  opacity: 1;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+`;
+
+const ModalContainer = styled('div')`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  margin: 0 auto;
+`;
+
 const DrawerContainer = styled('div')`
   padding: 64px;
 `;
@@ -111,6 +132,15 @@ const DrawerContainer = styled('div')`
 export default function Header() {
   const isTabletSize = useMediaQuery('(max-width: 768px)');
   const [openDrawer, setOpenDrawer] = useState(false);
+  const [modal, setModal] = useState(false);
+
+  const closeModal = () => {
+    setModal(false);
+  };
+
+  const openModal = () => {
+    setModal(!modal);
+  };
 
   const toggleDrawer = () => {
     setOpenDrawer(!openDrawer);
@@ -153,7 +183,7 @@ export default function Header() {
           </HamburgerButton>
         )}
         <MessagingSection>
-          <MessageButton>
+          <MessageButton onClick={openModal}>
             <svg
               width="24"
               height="24"
@@ -168,6 +198,13 @@ export default function Header() {
             </svg>
           </MessageButton>
         </MessagingSection>
+        {modal && (
+          <ModalSection>
+            <ModalContainer>
+              <Contact close={closeModal} open={modal} />
+            </ModalContainer>
+          </ModalSection>
+        )}
       </HeaderContainer>
 
       {openDrawer && (
