@@ -4,8 +4,17 @@ import Layout from '../layout/Layout';
 import Hero from '../components/home/Hero';
 import Work from '../components/home/Work';
 import Gallery from '../components/home/Gallery';
+import projects from '../data/project';
 
-export default function Home() {
+export async function getStaticProps() {
+  return {
+    props: {
+      data: projects,
+    },
+  };
+}
+
+export default function Home({ data }: { data: any[] }) {
   return (
     <>
       <Head>
@@ -37,7 +46,7 @@ export default function Home() {
         <Layout>
           <Hero />
           <Work />
-          <Gallery />
+          <Gallery projects={data} />
         </Layout>
       </main>
     </>
