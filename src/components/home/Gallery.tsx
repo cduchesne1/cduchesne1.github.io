@@ -1,5 +1,4 @@
 import { styled, Typography } from '@mui/material';
-import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
@@ -57,7 +56,7 @@ const ImageContainer = styled('div')`
   }
 `;
 
-const GalleryImage = styled(Image)`
+const GalleryImage = styled('img')`
   width: 100%;
   height: 100%;
   object-fit: cover;

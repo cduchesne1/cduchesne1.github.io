@@ -1,9 +1,7 @@
 import {
   Link, List, styled, Typography,
 } from '@mui/material';
-import Image from 'next/image';
 import React from 'react';
-import avatar from '../../../public/avatar.jpg';
 
 const HeroSection = styled('div')`
   padding-top: 96px;
@@ -105,7 +103,7 @@ const AvatarBackground = styled('div')`
   }
 `;
 
-const Avatar = styled(Image)`
+const Avatar = styled('img')`
   border-radius: 50%;
   width: 100%;
   height: 100%;
@@ -223,7 +221,7 @@ export default function Hero() {
           </Technologies>
         </ContentWrapper>
         <AvatarBackground>
-          <Avatar src={avatar} alt="Headshot" />
+          <Avatar src="/avatar.jpeg" alt="Headshot" />
         </AvatarBackground>
       </HeroContainer>
     </HeroSection>
