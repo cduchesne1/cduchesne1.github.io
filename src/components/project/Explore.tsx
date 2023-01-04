@@ -50,7 +50,7 @@ export default function Explore({ title, path }: ExploreProps) {
         <ExploreNext variant="overline">Next Project</ExploreNext>
         <ExploreButton
           variant="text"
-          component={Link}
+          LinkComponent={Link}
           href={`/projects/${path}`}
           endIcon={<EastIcon style={{ width: '44px', height: '44px' }} />}
         >
