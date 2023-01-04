@@ -67,7 +67,7 @@ const projects: Project[] = [
     path: 'truematch',
     title: 'TrueMatch',
     description:
-      'A mobile application that allows users to find and match with other users based on their astrology signs. If two users like each other, they can chat with each other.\n\nThis project was a real challenge for me. When starting it, I was used to work with Firebase and had little experience with REST APIs. I hit some limitations with Firebase and had no choice but to build a full REST API connected to a database to supply the mobile app.\n\n This project is probably the best self-learning experience I had. I was able to lear a lot about full-stack development & develop a passion for it.',
+      'A mobile application that allows users to find & match with other users based on their astrology signs. If two users like each other, they can chat.\n\nThis project was a real challenge for me. When starting it, I was used to work with Firebase and had little experience with REST APIs. I hit some limitations with Firebase and had no choice but to build a full REST API connected to a database to supply the mobile app.\n\n This project is probably the best self-learning experience I had. I was able to learn a lot about full-stack development & develop a passion for it.',
     date: 'October, 2020',
     gallery: [
       {
@@ -113,7 +113,7 @@ const projects: Project[] = [
     path: 'aeglo',
     title: 'AEGLO Website',
     description:
-      "The Laval University's Software Engineering Student Association's wanted to revamp their website so me and few other students decided to tackle this challenge.\n\nWe started from scratch by looking at some designs for inspirations & started from there. Since I had some experience with softwares like Adobe XD & Figma, I was the one who designed the website's layout. I also did a lot of the development of the website.",
+      "The Laval University's Software Engineering Student Association's wanted to revamp their website so me and a few other students decided to tackle this challenge.\n\nWe started from scratch by looking at some designs for inspiration & started from there. Since I had some experience with softwares like Adobe XD & Figma, I was the one who designed the website's layout. I also did a lot of the development of the website.",
     date: 'December, 2021',
     gallery: [
       {
@@ -224,7 +224,7 @@ const projects: Project[] = [
     path: 'credigit',
     title: 'Credigit',
     description:
-      'This project was my final college project. My team & I decided to develop a payment system working with digital prints. We created a registration system, a POS, payment terminal and a dashboard. To ensure the security of the system, we used AES & RSA to encode the data.\n\nThe project was developed under the MVC pattern. We implemented AES & RSA ourselves which was not easy to do with Java. We also used a Raspberry Pi to simulate the payment terminal.\n\nNote: The company mentioned in the video is a fictional company & the project is the sole property of the people who worked on it.',
+      'This project was my final college project. My team & I decided to develop a payment system working with digital prints. We created a registration system, a POS, a payment terminal & a dashboard. To ensure the security of the system, we used AES & RSA to encrypt the data.\n\nThe project was developed under the MVC pattern. We implemented AES & RSA ourselves which was not easy to do with Java. We also used a Raspberry Pi to simulate the payment terminal.\n\nNote: The company mentioned in the video is a fictional company & the project is the sole property of the people who worked on it.',
     date: 'February, 2020',
     gallery: [
       {
@@ -294,7 +294,7 @@ const projects: Project[] = [
     path: 'quoridor',
     title: 'Quoridor',
     description:
-      "This project was developed during a Python course. The goal of the project was to develop a game of Quoridor. The player played against an AI developed by the teacher by communicating with a REST API. We also needed to implement the possibility to play automatically with an algorithm of our choosing et try to beat the teacher's AI.\n\nThe algorithm we chose was the Minimax algorithm, but we were forced to limit our search depth to 2 to optimize the time it took to play.",
+      "This project was developed during a Python course. The goal of the project was to develop a game of Quoridor. The player played against an AI developed by the teacher by communicating with a REST API. We also needed to implement the possibility to play automatically with an algorithm of our choosing & try to beat the teacher's AI.\n\nThe algorithm we chose was the Minimax algorithm, but we were forced to limit our search depth to 2 to optimize the time it took to play.",
     date: 'November, 2020',
     gallery: [
       {
