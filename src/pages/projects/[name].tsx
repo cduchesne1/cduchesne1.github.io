@@ -69,8 +69,12 @@ export default function Project({ projectData, nextProjectData }: ProjectProps) 
             title={projectData.title}
             description={projectData.description}
             date={projectData.date}
+            hasSite={projectData.hasSite}
+            siteLink={projectData.siteLink}
             hasRepo={projectData.hasRepo}
             repoLink={projectData.repoLink}
+            hasVideo={projectData.hasVideo}
+            videoLink={projectData.videoLink}
           />
           <Gallery data={projectData.gallery} />
           <Tech
