@@ -133,7 +133,7 @@ const projects: Project[] = [
       'The choice of technologies for this project was pretty straight forward. We already had some experience with React so we decided to go with it.',
     technologies: ['TypeScript', 'React', 'Next.js', 'Chakra UI', 'Adobe XD'],
     hasSite: true,
-    siteLink: 'https://aeglo.netlify.app/',
+    siteLink: 'https://aeglo.ift.ulaval.ca/',
     hasRepo: true,
     repoLink: 'https://github.com/aeglo/website-2.0',
     hasVideo: false,
