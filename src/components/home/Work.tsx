@@ -121,7 +121,7 @@ export default function Work() {
               </JobLink>
             </TabContentTitleSection>
             <JobContent variant="body2">
-              May 2021 - August 2021 & May 2022 - August 2022
+              May 2021 - August 2021 & May 2022 - August 2022 & Currently
             </JobContent>
             <List>
               <JobContent variant="body2">
