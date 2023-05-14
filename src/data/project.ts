@@ -142,6 +142,50 @@ const projects: Project[] = [
   },
   {
     thumbnail: {
+      src: '/projects/meishi/meishi_preview_01.png',
+      alt: 'Meishi Project Thumbnail',
+    },
+    path: 'meishi',
+    title: 'Meishi - A link in bio platform',
+    description:
+      'Meishi is an application that lets users regroup all their links in one place much like linktr.ee.\n\nThis application was developed during a web application security class. Many security best practices were included in the project such as CAPTCHA, throttling, encryption, input validation, cross-site scripting prevention & more.\n\nThis project was a great learning experience for me. I learned a lot about web application security & how to implement security best practices.',
+    date: 'April, 2023',
+    gallery: [
+      {
+        src: '/projects/meishi/meishi_preview_02.png',
+        alt: 'Meishi Preview 1',
+      },
+      {
+        src: '/projects/meishi/meishi_preview_03.png',
+        alt: 'Meishi Preview 2',
+      },
+      {
+        src: '/projects/meishi/meishi_preview_04.png',
+        alt: 'Meishi Preview 3',
+      },
+    ],
+    techDescription:
+      'We had the liberty to choose the technologies we wanted to use for this project. So, I decided to use technologies I was familiar with and that would allow me to add security best practices easily.',
+    technologies: [
+      'TypeScript',
+      'NestJS',
+      'React',
+      'Chakra UI',
+      'MongoDB',
+      'Mongoose',
+      'Firebase Hosting',
+      'Heroku',
+    ],
+    hasSite: false,
+    siteLink: '',
+    hasRepo: true,
+    repoLink: 'https://github.com/cduchesne1/GLO-3202-Meishi',
+    hasVideo: true,
+    videoLink: 'https://www.youtube.com/embed/cT4rSSLYz40',
+    metaTitle: 'Meishi',
+  },
+  {
+    thumbnail: {
       src: '/projects/repub/repub_preview_01.png',
       alt: 'Repub Project Thumbnail',
     },
